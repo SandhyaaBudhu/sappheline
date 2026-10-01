@@ -1,0 +1,502 @@
+.immersive-section {
+  background: var(--surface);
+  padding: 70px 0;
+  margin-bottom: 80px;
+  border-block: 1px solid var(--line);
+  scroll-margin-top: 110px;
+}
+.immersive-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.3fr;
+  gap: 8%;
+  align-items: center;
+}
+.immersive-copy > .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 8px;
+}
+.immersive-copy h2 {
+  font-size: 60px;
+  line-height: 1.05;
+  margin: 20px 0;
+  letter-spacing: -0.7px;
+}
+.immersive-copy > p:not(.model-disclosure) {
+  font-size: 11px;
+  line-height: 1.95;
+  color: var(--muted);
+  max-width: 300px;
+}
+.jewelry-study-tabs {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0 28px;
+  max-width: 330px;
+  border-top: 1px solid var(--line);
+}
+.jewelry-study-tabs > button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--muted);
+  text-align: left;
+}
+.jewelry-study-tabs > button > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.jewelry-study-tabs > button > svg {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.jewelry-study-tabs > button.active,
+.jewelry-study-tabs > button:hover {
+  color: var(--ink);
+}
+.jewelry-study-tabs > button.active > svg,
+.jewelry-study-tabs > button:hover > svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+.viewer-piece-name > .eyebrow {
+  font-size: 6px;
+  color: var(--muted);
+  letter-spacing: 1.4px;
+}
+.viewer-piece-name > h3 {
+  font-size: 27px;
+  margin: 6px 0 14px;
+  line-height: 1.2;
+}
+.viewer-finishes {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.viewer-finishes > legend {
+  font-size: 6px;
+  letter-spacing: 1.1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.viewer-finishes > legend > span {
+  font-size: 9px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+.viewer-finishes > div {
+  display: flex;
+  gap: 13px;
+  padding: 12px 2px;
+}
+.viewer-finishes .metal-choice {
+  border-color: var(--surface);
+}
+.immersive-copy > .arrow-link {
+  margin-top: 8px;
+  font-size: 10px;
+}
+.immersive-copy > .model-disclosure {
+  font-size: 8px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 22px;
+}
+.jewelry-viewer {
+  min-width: 0;
+  border: 1px solid #829caf25;
+  background: #10273e;
+  color: #dce7ef;
+  box-shadow: 0 20px 55px #0a233519;
+}
+.jewelry-stage {
+  position: relative;
+  height: 475px;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 38%,
+    #29425b 0%,
+    #152e48 48%,
+    #0b2035 100%
+  );
+}
+.jewelry-canvas {
+  position: absolute;
+  inset: 0;
+}
+.jewelry-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  outline-offset: -7px;
+}
+.jewelry-canvas canvas:active {
+  cursor: grabbing;
+}
+.viewer-studio-label {
+  position: absolute;
+  top: 23px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  pointer-events: none;
+  font-size: 7px;
+  letter-spacing: 1.7px;
+  color: #c5d6e4;
+}
+.viewer-studio-label > span:last-child {
+  margin-left: auto;
+  font-size: 6px;
+  letter-spacing: 1.5px;
+  color: #abc1d3;
+}
+.viewer-live-dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #afcddf;
+  box-shadow: 0 0 8px #aecddd40;
+}
+.viewer-gesture {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+  color: #b5cbdc;
+  font-size: 8px;
+  letter-spacing: 0.4px;
+}
+.viewer-watermark {
+  position: absolute;
+  bottom: 12px;
+  right: 22px;
+  font-family: var(--display);
+  font-size: 31px;
+  font-style: italic;
+  color: #88a5bb5e;
+  pointer-events: none;
+}
+.viewer-cover {
+  position: absolute;
+  inset: 0;
+}
+.viewer-cover > img,
+.viewer-cover > .image-fallback {
+  position: absolute;
+  inset: 0;
+  opacity: 0.85;
+}
+.viewer-cover-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #061b35cf, transparent 80%);
+}
+.viewer-cover-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 25px;
+  text-align: center;
+}
+.viewer-cover-message > span {
+  font-family: var(--display);
+  font-size: 28px;
+}
+.viewer-cover-message > small {
+  max-width: 220px;
+  font-size: 9px;
+  line-height: 1.7;
+  color: #bcd0df;
+}
+.viewer-cover-message > .button {
+  font-size: 10px;
+  gap: 12px;
+  min-height: 45px;
+  box-shadow: 0 5px 35px #05162940;
+}
+.viewer-loader {
+  animation: studio-spin 1.6s linear infinite;
+}
+@keyframes studio-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  border-top: 1px solid #819ab531;
+  background: #0d243c;
+}
+.viewer-control-group {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.viewer-control-group > button {
+  height: 33px;
+  width: 33px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cadbe7;
+  border-radius: 2px;
+}
+.viewer-control-group > button:hover:not(:disabled) {
+  color: white;
+  background: #789ab527;
+}
+.viewer-control-group > button:disabled {
+  opacity: 0.3;
+}
+.viewer-control-divider {
+  height: 14px;
+  width: 1px;
+  background: #718ca537;
+  margin: 0 7px;
+}
+.viewer-control-group > .viewer-spin {
+  width: auto;
+  gap: 8px;
+  padding-inline: 9px;
+  font-size: 8px;
+  letter-spacing: 0.2px;
+}
+.viewer-spin[aria-pressed="true"] {
+  background: #789ab527;
+  color: white;
+}
+.product-immersive {
+  margin-bottom: 0;
+  padding-block: 65px;
+  background: var(--bg);
+}
+.gallery-360-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 10px;
+  border: 1px solid var(--line);
+  padding: 12px;
+  margin-top: 20px;
+}
+.gallery-360-link:hover {
+  background: var(--surface);
+}
+.product-immersive .immersive-grid {
+  grid-template-columns: 0.85fr 1.3fr;
+}
+.product-immersive .viewer-piece-name {
+  margin-top: 28px;
+}
+.product-immersive .viewer-finishes .metal-choice {
+  border-color: var(--bg);
+}
+.product-immersive .jewelry-stage {
+  height: 420px;
+}
+[data-theme="dark"] .jewelry-stage {
+  background: radial-gradient(
+    ellipse at 50% 38%,
+    #20364e 0%,
+    #11253c 48%,
+    #071628 100%
+  );
+}
+[data-theme="dark"] .jewelry-viewer {
+  box-shadow: 0 20px 55px #0003;
+  border-color: #40586e55;
+}
+[data-theme="dark"] .viewer-toolbar {
+  background: #0a1c30;
+}
+@media (max-width: 1150px) {
+  .immersive-grid {
+    gap: 5%;
+    grid-template-columns: 0.8fr 1.15fr;
+  }
+  .immersive-copy h2 {
+    font-size: 54px;
+  }
+  .jewelry-stage {
+    height: 465px;
+  }
+}
+@media (max-width: 850px) {
+  .immersive-section {
+    padding: 50px 0;
+    margin-bottom: 60px;
+  }
+  .immersive-grid {
+    gap: 4%;
+    grid-template-columns: 1fr 1.2fr;
+  }
+  .immersive-copy h2 {
+    font-size: 45px;
+  }
+  .jewelry-stage {
+    height: 445px;
+  }
+  .viewer-studio-label {
+    left: 16px;
+    right: 16px;
+    top: 19px;
+    font-size: 6px;
+    letter-spacing: 1.1px;
+  }
+  .viewer-studio-label > span:last-child {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .viewer-toolbar {
+    padding: 9px;
+  }
+  .viewer-control-group > button {
+    width: 28px;
+    height: 30px;
+  }
+  .viewer-control-divider {
+    margin-inline: 3px;
+  }
+  .viewer-control-group > .viewer-spin {
+    padding-inline: 6px;
+    font-size: 7px;
+    gap: 5px;
+  }
+  .immersive-copy > .model-disclosure {
+    font-size: 7px;
+  }
+  .viewer-piece-name > h3 {
+    font-size: 24px;
+  }
+  .product-immersive {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 580px) {
+  .immersive-section {
+    padding: 42px 0;
+    margin-bottom: 45px;
+  }
+  .immersive-grid,
+  .product-immersive .immersive-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .immersive-copy h2 {
+    font-size: 54px;
+    margin: 18px 0;
+  }
+  .immersive-copy > .eyebrow {
+    font-size: 7px;
+  }
+  .immersive-copy > p:not(.model-disclosure) {
+    max-width: 100%;
+    font-size: 11px;
+  }
+  .jewelry-study-tabs {
+    flex-direction: row;
+    gap: 0;
+    max-width: 100%;
+    margin: 23px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .jewelry-study-tabs > button {
+    flex: 1;
+    padding: 13px 7px;
+    gap: 7px;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    font-size: 9px;
+  }
+  .jewelry-study-tabs > button > span {
+    font-size: 6px;
+  }
+  .jewelry-study-tabs > button > svg {
+    display: none;
+  }
+  .jewelry-study-tabs > button.active {
+    border-bottom-color: var(--ink);
+  }
+  .viewer-piece-name > h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .viewer-finishes > legend {
+    font-size: 6px;
+  }
+  .immersive-copy > .model-disclosure {
+    font-size: 8px;
+    margin-top: 18px;
+  }
+  .jewelry-stage,
+  .product-immersive .jewelry-stage {
+    height: 400px;
+  }
+  .viewer-toolbar {
+    padding: 10px;
+  }
+  .viewer-control-group > button {
+    width: 31px;
+    height: 33px;
+  }
+  .viewer-control-group > .viewer-spin {
+    font-size: 8px;
+  }
+  .viewer-control-divider {
+    margin-inline: 5px;
+  }
+  .viewer-gesture {
+    font-size: 7px;
+    bottom: 20px;
+  }
+  .viewer-cover-message > span {
+    font-size: 28px;
+  }
+  .viewer-studio-label {
+    font-size: 6px;
+  }
+  .product-immersive {
+    margin-bottom: 0;
+  }
+  .product-immersive .viewer-piece-name {
+    margin-top: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .viewer-loader {
+    animation: none;
+  }
+}
